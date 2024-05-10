@@ -1,0 +1,122 @@
+.container{
+    margin: 0px;
+    padding: 0px;
+}
+.header
+{
+    background-color:black;
+    margin-top: 10px;
+    height: 45px;;
+}
+.navbar
+{
+    text-align: left;
+    width:100%;
+    height: 42px;
+    background-color: black ;
+    display: block;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.sidebar
+{
+    padding: 10px;
+    overflow: wrap;
+    width: 18%;
+    margin-top: 4px;
+    min-height:80vh;
+    border-radius: 5px;
+    background-color: rgb(198, 198, 212);
+    float: left;
+    margin-bottom: 5px;
+    display: block;
+}
+.main{
+    margin-top:5px ;
+    width: 80%;
+    min-height: 80vh;
+    float: right;
+    display: block;
+}
+.footer
+{
+    width: 100%;
+    background-color:wheat;
+    height: 40px;
+    clear: both;
+    display: block;
+}
+.logo
+{
+    height:40px;
+    width: 6%;
+    float: left;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+.slink
+{
+    width:92%;
+    text-align: right;
+    height: 40px;
+    float:right;
+    
+}
+.link
+{
+    
+    text-decoration: none;
+    padding-top: 5px;
+    color:white;
+    margin: 5px;
+}
+.nav-link
+{
+    text-decoration: none;
+    padding-top: 5px;
+    color: white;
+    font-size:small;
+    margin-left:5px;
+    
+}
+.nav
+{
+    padding: 5px;
+}
+
+.box img 
+{
+    width: 150px;
+
+    height: 80px;
+    max-width: fit-content;
+}
+.box{
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgba(123, 124, 128, 0.539);
+    padding-left: 5px;
+   
+  
+    margin: 5px;
+    font-weight: 300;
+}
+
+@media screen and (min-width:375px) and (max-width:768px) {
+    .main{
+        width:100%;
+    }
+    .sidebar
+    {
+        width:100%;
+    }
+}
+@media screen and (max-width:820px) {
+    .main{
+        width:100%;
+    }
+    .sidebar{
+        width:97.5%;
+    }
+}
