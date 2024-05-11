@@ -1,0 +1,35 @@
+1. 
+function foo() {
+    x = 1;
+    function x() { }
+    var x = '2';
+    return x;
+}
+alert( typeof foo() );
+
+Output - string
+
+------------------------------------------------------
+
+2.
+function foo() {
+    x = 1;
+    function x() { }
+    var x = '2';
+    return x;
+}
+alert( typeof foo() );
+
+Output - function
+-------------------------------------------------------
+3.
+var x = 1;
+function foo() {
+    x = 10;
+    return;
+    function x() {}
+}
+foo();
+console.log( x );
+
+Output - 1
