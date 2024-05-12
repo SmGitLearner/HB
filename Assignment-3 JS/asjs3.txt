@@ -1,0 +1,186 @@
+1.
+let statesInIndia = ["Andhra Pradesh", 
+"Assam",
+"Bihar",
+"Chhattisgarh", 
+"Goa", 
+"Gujarat", 
+"Haryana", 
+"Himachal Pradesh", 
+"Jharkhand", 
+"Karnataka", 
+"Kerala", 
+"Madhya Pradesh", 
+"Maharashtra", 
+"Manipur", 
+"Meghalaya", 
+"Mizoram", 
+"Nagaland", 
+"Odisha", 
+"Punjab", 
+"Rajasthan", 
+"Sikkim", 
+"Tamil Nadu", 
+"Telangana", 
+"Tripura", 
+"Uttar Pradesh", 
+"Uttarakhand", 
+"West Bengal"];
+function startsWithVowel(state) 
+{
+    return !['A', 'E', 'I', 'O', 'U'].includes(state[0].toUpperCase());
+}
+let statesNotStartingWithVowel = statesInIndia.filter(startsWithVowel);
+console.log(statesNotStartingWithVowel);
+
+2.
+
+let str = 'I love my India';
+let words = str.split(' ');
+words.reverse();
+let reversedStr = words.join(' ');
+console.log(reversedStr);
+
+3.
+
+let string = 'INDIA';
+let stringArray = string.split('');
+stringArray.splice(3, 0, 'O', 'N', 'E', 'S');
+let output = stringArray.join('');
+console.log(output);
+
+4.
+
+let sample = "This is Java Script"
+let vowel = 0
+let consonent = 0
+sample.toLowerCase().split("").map(char => {
+  if (['a', 'e', 'i', 'o', 'u'].includes(char))
+    vowel++
+  else
+    consonent++
+})
+console.log("Vowel :"+vowel+"\nConsonant:"+ consonent)
+
+5.
+
+function correctWord(sentence, wrong, correct) {
+  const word = new RegExp(wrong);
+  const correctedSentence = sentence.replace(word, correct);
+  return correctedSentence;
+}
+const sentence = "The colr of the sky is blue.";
+const correctedSentence = correctWord(sentence, "colr", "color");
+console.log(correctedSentence);
+
+6.
+
+const Arr = [1, 2, 3, 9, 10, 7, 5, 4, 3];
+const answer = Arr.filter(number => number > 5);
+
+console.log(answer);
+
+7.
+
+const students = [
+  { name: "Ram", scores: [80, 70, 60] },
+  { name: "Mohan", scores: [80, 70, 90] },
+  { name: "Sai", scores: [60, 70, 80] },
+  { name: "Hemang", scores: [90, 90, 80, 80] },
+];
+
+const output = students.map(student => {
+  const average = student.scores.reduce((total, score) => total + score, 0) / student.scores.length;
+  return { name: student.name, average: average };
+});
+
+console.log(output);
+
+8.
+
+function sum(number) {
+    while (number > 9) {
+        let sum = 0;
+        while (number > 0) {
+            sum += number % 10;
+            number = Math.floor(number / 10);
+        }
+        number = sum;
+    }
+    return number;
+}
+const inputNumber = 456;
+const result = sum(inputNumber);
+console.log(result);
+
+9.
+
+function countWords(paragraph) {
+  const wordsArray = paragraph.split(/\s+/);
+
+  const wordCount = wordsArray.length;
+
+  return wordCount;
+}
+
+const paragraph = "This is a paragraph";
+console.log(countWords(paragraph));
+
+10.
+
+function reverseString(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
+
+const input = "Hello";
+console.log(reverseString(input));
+
+11.
+
+const students = [{
+    student1: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    student2: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  },
+  {
+    student3: {
+      subject1: 44,
+      subject2: 56,
+      subject3: 87,
+      subject4: 97,
+      subject5: 37
+    }
+  }
+];
+
+const output = students.map(student => {
+
+  const studentData = Object.values(student)[0];
+
+  const sum = Object.values(studentData).reduce((total, score) => total + score, 0);
+
+  const average = sum / Object.keys(studentData).length;
+
+  return {
+    average
+  };
+});
+
+console.log(output);
