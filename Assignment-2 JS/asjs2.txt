@@ -1,0 +1,77 @@
+1.  Write code to display from 1 to 100 but just even numbers.
+for(var i=1;i<=100;i++)
+    {
+        if(i%2==0)
+        {
+            console.log(i+" ");
+        }
+    }     
+    
+2.Write a function to calculate which can add, subtract, multiply and divide two numbers. Use switch inside function.
+function calculate(num1, num2, operation) {
+    let result;
+    switch(operation) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if(num2 !== 0) {
+                result = num1 / num2;
+            } else {
+                result = "Error: Division by zero";
+            }
+            break;
+        default:
+            result = "Invalid operation";
+    }
+    return result;
+}
+
+3. You need to write a function findTax() that takes a number type variable as an argument which is the salary of a person. You need to calculate the tax amount on his salary by using the Js switch control flow. The tax rates are given below.
+
+if 500000 >= salary > 0 then 0% tax on the entire salary.
+If 1000000 >= salary > 500000 then 10% tax on the entire salary.
+If 1500000 >= salary > 1000000 then 20% tax on the entire salary.
+If the salary > 1500000 then 30% tax on the entire salary.
+
+function findTax(salary) {
+    let taxAmount;
+    switch(true) {
+        case (salary > 0 && salary <= 500000):
+            taxAmount = 0;
+            break;
+        case (salary > 500000 && salary <= 1000000):
+            taxAmount = salary * 0.1;
+            break;
+        case (salary > 1000000 && salary <= 1500000):
+            taxAmount = salary * 0.2;
+            break;
+        case (salary > 1500000):
+            taxAmount = salary * 0.3;
+            break;
+        default:
+            taxAmount = "Invalid salary";
+    }
+    return taxAmount;
+}
+
+4.Write a function to perform this. You are given two numbers n1 and n2. You need to find the sum of the products of their corresponding digits. So, for a number n1= 6 and n2 = 34, you'll do (6*4)+(0*3) = 24.
+
+function sumOfProducts(n1, n2) {
+    const digits1 = Array.from(String(n1), Number);
+    const digits2 = Array.from(String(n2), Number);
+    let sum = 0;
+    for(let i = 0; i < Math.max(digits1.length, digits2.length); i++)
+    {
+        const digit1 = digits1[i] || 0;
+        const digit2 = digits2[i] || 0;
+        sum += digit1 * digit2;
+    }
+    return sum;
+}
