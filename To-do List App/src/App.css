@@ -1,11 +1,8 @@
 #litem{
-  
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    
 }
-
 li
 {
     margin-left: 25px;
@@ -22,8 +19,7 @@ li
     height: 45px;
     font-weight: bolder;
 }
-#edit{
-    
+#edit{   
     font-size: medium;
     margin-left: 10px;
     background-color: rgb(239, 222, 37);
@@ -33,7 +29,6 @@ li
     font-weight: bolder;
 }
 #delete{
-    
     font-size: medium;
     margin-left: 10px;
     background-color: rgb(229, 11, 11);
@@ -58,17 +53,10 @@ li
     background-color: rgb(227, 208, 202);
     height:500px;
 }
-
-* {
-    
-    
-      
-  }
-  h2{
+ h2{
     padding-top: 8px;;
-    text-align: center;
-    
-        font-family: "Bungee Spice", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
+    text-align: center;   
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
