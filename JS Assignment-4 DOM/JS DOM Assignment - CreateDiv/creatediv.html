@@ -1,0 +1,23 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      //Write your code here
+      function createDiv(width, height, text) {
+        var newDiv = document.createElement("div");
+        newDiv.style.width = width + "px";
+        newDiv.style.height = height + "px";
+        newDiv.textContent = text;
+        newDiv.style.backgroundColor = "red";
+        newDiv.style.color = "white";
+        newDiv.style.fontSize = "5em";
+        document.getElementById("container").append(newDiv);
+      }
+
+      // Do not change this code
+      createDiv(400, 100, "New Div");
+      Window.createDiv;
+    </script>
+  </body>
+</html>
