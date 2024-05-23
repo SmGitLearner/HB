@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <div id="time">
+      <span id="hh">00</span>:<span id="mm">00</span>:<span id="ss">00</span>
+    </div>
+
+    <button onclick="start()" id="start">start</button>
+    <button onclick="pause()" id="pause">pause</button>
+    <button onclick="stop()" id="stop">stop</button>
+    <script>
+      let s = 0;
+      let m = 0;
+      let h = 0;
+      let timer;
+      let pausedStatus = false;
+      document.getElementById("pause").disabled = true;
+      document.getElementById("stop").disabled = true;
+
+      function start() {
+        timer = setInterval(updateTime, 1000);
+        document.getElementById("start").disabled = true;
+        document.getElementById("pause").disabled = false;
+        document.getElementById("stop").disabled = false;
+      }
+      function pause() 
+      {
+        clearInterval(timer);
+        document.getElementById("start").disabled = false;
+        document.getElementById("stop").disabled = false;
+        document.getElementById("start").disabled = true;
+        if (!pausedStatus) {
+          clearInterval(timer);
+          document.getElementById("pause").textContent = "Continue";
+        } else {
+          start();
+          document.getElementById("pause").textContent = "Pause";
+        }
+        pausedStatus=!pausedStatus;
+      }
+      function stop() {
+        clearInterval(timer);
+        s = 0;
+        m = 0;
+        h = 0;
+        document.getElementById("ss").innerHTML = "00";
+        document.getElementById("mm").innerHTML = "00";
+        document.getElementById("hh").innerHTML = "00";
+        document.getElementById("start").disabled = false;
+        document.getElementById("pause").disabled = true;
+        document.getElementById("stop").disabled = true;
+      }
+      function updateTime() {
+        s++;
+
+        if (s == 60) {
+          m++;
+          s = 0;
+        }
+        if (m == 60) {
+          h++;
+          m = 0;
+        }
+        document.getElementById("ss").innerHTML = s;
+        document.getElementById("mm").innerHTML = m;
+        document.getElementById("hh").innerHTML = h;
+        if (s < 10) {
+          document.getElementById("ss").innerHTML = "0" + s;
+        }
+        if (m < 10) {
+          document.getElementById("mm").innerHTML = "0" + m;
+        }
+        if (h < 10) {
+          document.getElementById("hh").innerHTML = "0" + h;
+        }
+        console.log(h,m,s);
+
+      }
+    </script>
+  </body>
+</html>
