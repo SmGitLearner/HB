@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <style>
+       
+      .modal {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        /*padding: 20px;*/
+        border: 1px solid #ccc;
+        z-index: 10;
+        border-radius: 10px;
+        
+      }
+      .modal_show {
+        display: block;
+      }
+      #content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:whitesmoke;
+        font-size: x-large;
+        text-align: center;
+        background-color: Tomato;
+        height: 300px;
+        top: 40%;
+        left: 50%;
+      }
+      #title{
+        
+        padding-left: 20px;
+        padding-top :2px;
+        padding-bottom: 2px;
+        background-color: DodgerBlue;    
+        
+    }
+      .close_btn{
+        margin-top: 10px;
+        background-color: rgb(228, 26, 26);
+        color: aliceblue;
+        block-size: 20px;
+        width: 50;
+        height: 30px;
+        float:right;
+        border-radius: 8px;
+        border-color: rgb(228, 26, 26);;
+        margin-right: 10px;
+        font-weight: bolder;
+      }
+      #show{
+        background-color: rgba(7, 79, 235, 0.733);
+        color: aliceblue;
+        block-size: 20px;
+        width:fit-content;
+        height: 30px;
+        border-color:rgb(166, 171, 171) ;
+        
+      }
+      .modalfooter{
+        height: 20px;
+        background-color:white;
+      }
+      #cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5px;
+        margin-right:5px
+      }
+    </style>
+  </head>
+  <body>
+    <h2>This is an example of modal</h2>
+    <button onclick="modal_show()" id="show">Click me to open modal</button>
+    <div class="modal">
+      <div id="title"><h3 >HASHEDBIT INNOVATIONS</h3></div>
+      <div id="content"><span id="cont" > I am an Intern at HASHEDBIT Innovations</span></div>
+      <div class="modal_footer"><button onclick="close_modal()" class="close_btn">Close</button></div>
+    </div>
+    <script>
+      function modal_show() {
+        document.querySelector(".modal");
+        document.querySelector(".modal").classList.add("modal_show");
+      }
+      function close_modal() {
+        const hide_modal = document.querySelector(".modal");
+        hide_modal.classList.remove("modal_show");
+      }
+    </script>
+  </body>
+</html>
