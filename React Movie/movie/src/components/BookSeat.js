@@ -18,17 +18,20 @@ const BookSeat = () => {
     <div className="book-seat">
       <h1>Book Seat for Movie {id}</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='bs'>
           <label>Name:</label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+        
         </div>
-        <div>
+        
+        <div className='bs'>
           <label>Email:</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         </div>
-        <div>
+        
+        <div className='bs'>
           <label>Mobile:</label>
-          <input type="text" value={mobile} onChange={(e) => setMobile(e.target.value)} required />
+          <input type="number" value={mobile} onChange={(e) => setMobile(e.target.value)} maxLength={10} required />
         </div>
         <button type="submit">Submit</button>
       </form>
